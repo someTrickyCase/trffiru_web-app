@@ -3,19 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #1e1e1e;
+    --background-secondary: #272727;
+    --foreground: #f0e5de;
+    --accent: #ce6d40;
+    --hint: #cfbeb3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+    * {
+        @apply no-scrollbar;
+    }
+    body {
+        @apply bg-background text-foreground;
+        overflow-x: hidden;
+        font-family: var(--font-jost-sans), sans-serif;
+    }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.button {
+    @apply flex items-center justify-center font-bold text-xl cursor-pointer h-[50px] rounded-xl bg-background w-full;
+}
+
+.pagination-bar p {
+    @apply w-8 h-full flex items-center justify-center;
+}
+
+.pagination-bar .arrow {
+    @apply flex cursor-pointer items-center justify-center h-full w-[50px] rounded-2xl text-2xl text-accent bg-background-secondary;
+}
+
+.tab-button {
+    @apply w-40 transition-all ease-in;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
