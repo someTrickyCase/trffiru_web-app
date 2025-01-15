@@ -27,7 +27,7 @@ const HomePage = () => {
                         height={900}
                         src={"/HeroPhotoCompressed.jpg"}
                         alt='Offroad photo'
-                        className='object-cover h-full absolute'
+                        className='object-cover h-full min-w-full absolute'
                     />
 
                     <div

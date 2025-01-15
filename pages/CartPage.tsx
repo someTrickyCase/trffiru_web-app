@@ -43,7 +43,7 @@ const ProductCartPage = () => {
             <div className='h-[50px] flex items-center justify-center'>
                 <div
                     onClick={handleButtonBack}
-                    className='absolute left-[20px] text-background-secondary'>
+                    className='absolute left-[20px] text-hint cursor-pointer'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -71,7 +71,7 @@ const ProductCartPage = () => {
                 />
                 <p className='text-background-secondary uppercase font-bold'>Корзина пуста</p>
             </div>
-            <div className='w-full flex flex-col items-center mt-[20px] gap-[10px]'>
+            <div className='w-full flex flex-col items-center mt-[20px] gap-[10px] relative'>
                 <div className='w-[80%] flex flex-col items-center mt-[20px] gap-[10px] md:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
                     {state.map((item) => (
                         <CartCard
@@ -84,7 +84,7 @@ const ProductCartPage = () => {
                 <div
                     className={`${
                         state.length === 0 ? "hidden" : "block"
-                    }  w-[60%] px-2 flex flex-col items-center bg-background-secondary rounded-lg py-[10px] gap-[6px]`}>
+                    }  w-[60%] md:w-[20%] px-2 flex flex-col items-center bg-background-secondary rounded-lg py-[10px] gap-[6px] absolute bottom-[-8rem]`}>
                     <p className='text-md font-bold'>{`Заказ на ${getTotalPrice()} руб.`}</p>
 
                     <Link

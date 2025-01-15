@@ -22,7 +22,7 @@ const ProductDescriptionCard = ({ searchedProduct }: { searchedProduct: string }
             {isLoading && <Sonner className='self-center' />}
             {data && (
                 <div className='w-full flex flex-col px-5 items-center gap-2'>
-                    <div className='bg-background-secondary flex flex-col items-center gap-4 w-full rounded-lg py-2'>
+                    <div className='bg-background-secondary flex flex-col items-center gap-4 w-full md:w-[50%]  rounded-lg py-2'>
                         <div className='flex flex-col items-center'>
                             <h2 className='text-xl font-bold text-center'>{data.title}</h2>
                             <p className='text-sm font-light'>Артикул: {data.article}</p>

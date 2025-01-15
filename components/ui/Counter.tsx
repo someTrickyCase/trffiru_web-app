@@ -15,11 +15,11 @@ const Counter = ({ item, className }: { item: ProductType; className?: string })
 
     useEffect(() => {
         cart.map((cartItem: ProductType & { quantity: number }) => {
-            if (cartItem.article === item.article) {
+            if (JSON.stringify(cartItem) === JSON.stringify(item)) {
                 setState({ isSelected: true, quantity: cartItem.quantity });
             }
         });
-    }, [cart, item.article]);
+    }, [cart, item]);
 
     function handleSelect() {
         if (state.isSelected) {

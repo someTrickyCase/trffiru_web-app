@@ -20,7 +20,6 @@ const SearchBar = () => {
             }
         }
     }
-    // ?s=lada&post_type=product
 
     return (
         <div

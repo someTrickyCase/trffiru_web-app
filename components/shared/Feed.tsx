@@ -53,7 +53,7 @@ const Feed = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-1 min-h-screen pt-20 px-5 items-center justify-items-center ",
+                "grid grid-cols-1 min-h-screen pt-20 px-5 items-center justify-items-center",
                 className
             )}>
             <h2
@@ -64,10 +64,12 @@ const Feed = ({
                 {search && `Реультаты поиска по запросу "${decodeURI(search)}"`}
             </h2>
             {isLoading && <Sonner className='self-center justify-self-center' />}
-            {data &&
-                data.map((item: ProductType) => (
-                    <FeedCard key={JSON.stringify(item)} item={item} />
-                ))}
+            <div className='grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-4 px-5 pb-10 items-center justify-items-center'>
+                {data &&
+                    data.map((item: ProductType) => (
+                        <FeedCard key={JSON.stringify(item)} item={item} />
+                    ))}
+            </div>
             <PaginationBar
                 curPage={curPage}
                 setPage={setPage}

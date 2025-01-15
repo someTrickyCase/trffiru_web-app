@@ -11,8 +11,8 @@ const DescriptionTabs = ({
     const [viewMode, setViewMode] = useState<"description" | "registry">("description");
 
     return (
-        <div className={cn("w-full flex flex-col gap-5", className)}>
-            <div className='flex w-full items-center justify-between bg-background-secondary px-2 py-2 rounded-xl'>
+        <div className={cn("w-full flex flex-col items-center gap-5", className)}>
+            <div className='flex w-full items-center justify-between bg-background-secondary px-2 py-2 rounded-xl md:w-[50%]'>
                 <div
                     onClick={() => setViewMode("description")}
                     className={`button tab-button ${
@@ -29,7 +29,7 @@ const DescriptionTabs = ({
                 </div>
             </div>
 
-            <div className='w-full overflow-x-hidden min-h-[17rem] relative'>
+            <div className='w-full md:w-[70%] overflow-x-hidden min-h-[17rem] relative'>
                 <div
                     className={`leading-5 transition-all duration-200 ease-in-out ${
                         viewMode === "description" ? undefined : "-translate-x-[100vw]"

@@ -17,7 +17,7 @@ const CartCard = ({
     }
 
     return (
-        <div className='flex flex-col w-[300px] gap-[10px] mb-[10px] bg-background-secondary py-[10px] px-[20px] rounded-2xl justify-self-center'>
+        <div className='flex flex-col w-[300px] h-full justify-between gap-[10px] mb-[10px] bg-background-secondary py-[10px] px-[20px] rounded-2xl justify-self-center'>
             <div className='flex gap-[12px] justify-between'>
                 <div className='relative rounded-xl overflow-x-scroll flex snap-x '>
                     <div className='h-full w-[10px] bg-accent absolute' />
